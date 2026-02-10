@@ -2,7 +2,7 @@ name: CI/CD Pipeline
 
 on:
   push:
-    branches: [ main, develop ]
+    branches: [ main, develop, 'feature/**', 'fix/**', 'hotfix/**' ]
   pull_request:
     branches: [ main ]
 
@@ -18,6 +18,12 @@ jobs:
           distribution: 'temurin'
           cache: maven
       - name: Build and Test Backend
+        env:
+          JWT_SECRET: dev_secret_very_long_string_for_testing_123456
+          JWT_EXPIRATION: 86400000
+          DB_URL: jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1
+          DB_USERNAME: sa
+          DB_PASSWORD: 
         run: |
           cd backend
           mvn clean test
