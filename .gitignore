@@ -1,0 +1,70 @@
+# Environment
+.env
+.env.local
+.env.*.local
+*.env
+
+# Java / Maven
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/resources/*.jar
+!**/src/test/resources/*.jar
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+/out/
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+# Node / JS
+node_modules/
+/frontend/dist
+.npm
+/frontend/.svelte-kit
+/frontend/.vercel
+/frontend/.netlify
+/frontend/build
+.eslintcache
+.stylelintcache
+/frontend/coverage
+.pnp
+.pnp.js
+
+# Docker
+.dockerignore
+# Do NOT ignore the Dockerfiles themselves, only if you had temp ones
+# docker-compose.override.yml
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Misc
+*.log
+.vscode/
+.antigravity/
+.gemini/
+/brain/
+node_modules
+dist
+temp
+tmp
