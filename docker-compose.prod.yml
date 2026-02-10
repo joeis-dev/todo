@@ -1,0 +1,18 @@
+services:
+  db:
+    container_name: todo_db_prod
+    restart: always
+
+  backend:
+    container_name: todo_backend_prod
+    build:
+      target: prod
+    restart: always
+
+  frontend:
+    container_name: todo_frontend_prod
+    build:
+      target: prod
+    ports:
+      - "80:80"
+    restart: always
