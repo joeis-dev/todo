@@ -39,6 +39,15 @@ class TodoControllerTest {
     @MockBean
     private JwtService jwtService;
 
+    @MockBean
+    private org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter usernamePasswordAuthenticationFilter;
+
+    @MockBean
+    private com.example.todo.infrastructure.security.JwtAuthenticationFilter jwtAuthenticationFilter;
+
+    @MockBean
+    private org.springframework.security.authentication.AuthenticationProvider authenticationProvider;
+
     @Test
     @WithMockUser(username = "testuser")
     void getTodos_ReturnsList() throws Exception {
